@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wordCloud</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Interactive word study</p>
+        <h1>wordCloud</h1>
+        <p class="subtitle">
+          Type a word, press enter or click add, and watch the cloud respond to
+          frequency.
+        </p>
+      </header>
+
+      <section class="controls" aria-label="Word input">
+        <form id="word-form" autocomplete="off">
+          <label class="sr-only" for="word-input">Add a word</label>
+          <input
+            id="word-input"
+            name="word"
+            type="text"
+            placeholder="Enter a word"
+            maxlength="40"
+          />
+          <button type="submit">Add</button>
+        </form>
+        <p class="hint">
+          Common filler words are muted in gray. Repeated, meaningful words grow
+          darker and bolder.
+        </p>
+      </section>
+
+      <section class="cloud-panel">
+        <div id="word-cloud" class="word-cloud" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
