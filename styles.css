@@ -119,6 +119,15 @@ button:hover {
   background: #2b2b2b;
 }
 
+.secondary-button {
+  color: #111111;
+  background: rgba(17, 17, 17, 0.08);
+}
+
+.secondary-button:hover {
+  background: rgba(17, 17, 17, 0.14);
+}
+
 .hint {
   margin: 0.85rem 0 0;
   font-size: 0.95rem;

@@ -1,6 +1,7 @@
 const form = document.getElementById('word-form');
 const input = document.getElementById('word-input');
 const cloud = document.getElementById('word-cloud');
+const clearButton = document.getElementById('clear-button');
 
 const fillerWords = new Set([
   'a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'from', 'if',
@@ -26,6 +27,12 @@ form.addEventListener('submit', (event) => {
   addWord(raw);
   renderCloud();
   form.reset();
+  input.focus();
+});
+
+clearButton.addEventListener('click', () => {
+  frequencies.clear();
+  renderCloud();
   input.focus();
 });
 
